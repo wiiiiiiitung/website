@@ -60,45 +60,63 @@
     </div>
 
     <div class="product-grid">
-      <article class="product-card">
+      <article class="product-card" tabindex="0" data-product="original">
         <div class="product-badge" style="--accent:#b3311f">🐉</div>
         <h3>Original</h3>
         <p>The blend that started it all — balanced, savory, and endlessly versatile.</p>
+        <span class="product-more">How to use →</span>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" tabindex="0" data-product="asian">
         <div class="product-badge" style="--accent:#c2703a">🥢</div>
         <h3>Asian Seasoning</h3>
         <p>Ginger, garlic, and umami-forward notes inspired by East Asian flavor profiles.</p>
+        <span class="product-more">How to use →</span>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" tabindex="0" data-product="mexican">
         <div class="product-badge" style="--accent:#d99a3d">🌮</div>
         <h3>Mexican Seasoning</h3>
         <p>Smoky chili and bold spice, built for tacos, grilled corn, and everything in between.</p>
+        <span class="product-more">How to use →</span>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" tabindex="0" data-product="spicy">
         <div class="product-badge" style="--accent:#8f1d1d">🔥</div>
         <h3>Spicy Seasoning</h3>
         <p>For the heat-seekers — all the Dragon Dust flavor with a serious kick.</p>
+        <span class="product-more">How to use →</span>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" tabindex="0" data-product="indian">
         <div class="product-badge" style="--accent:#a8541f">🍛</div>
         <h3>Indian Seasoning</h3>
         <p>Warm cumin, coriander, and curry spices layered for a rich, aromatic finish.</p>
+        <span class="product-more">How to use →</span>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" tabindex="0" data-product="bbq">
         <div class="product-badge" style="--accent:#7a4a1f">🍖</div>
         <h3>BBQ Seasoning</h3>
         <p>Sweet, smoky, and rich — rub it on before the grill does its thing.</p>
+        <span class="product-more">How to use →</span>
       </article>
     </div>
 
     <p class="product-note">More DWEI products coming soon — this page is a preview layout, product details and pricing to be added.</p>
   </section>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="product-modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-badge" id="modal-badge"></div>
+      <h3 id="modal-title"></h3>
+      <p class="modal-tagline" id="modal-tagline"></p>
+      <h4>How to use it</h4>
+      <p id="modal-usage"></p>
+    </div>
+  </div>
 
   <!-- CONTACT -->
   <section id="contact" class="tab-panel">

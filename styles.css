@@ -218,9 +218,21 @@ main {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.product-card:hover {
+.product-card:hover,
+.product-card:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(36, 29, 26, 0.08);
+  cursor: pointer;
+  outline: none;
+  border-color: var(--gold);
+}
+
+.product-more {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--dragon-red);
 }
 
 .product-badge {
@@ -341,6 +353,89 @@ main {
   color: var(--muted);
   font-size: 0.85rem;
   border-top: 1px solid var(--border);
+}
+
+/* Product modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 29, 26, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 36px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.25);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--dragon-red);
+}
+
+.modal-badge {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent, var(--dragon-red)) 15%, white);
+  border: 2px solid var(--accent, var(--dragon-red));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.modal-box h3 {
+  margin: 0 0 8px;
+}
+
+.modal-tagline {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 20px;
+}
+
+.modal-box h4 {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dragon-red);
+}
+
+#modal-usage {
+  margin: 0;
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
 }
 
 @media (max-width: 560px) {
