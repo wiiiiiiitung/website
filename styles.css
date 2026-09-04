@@ -303,6 +303,16 @@ main {
   text-align: right;
 }
 
+.contact-value a {
+  color: var(--charcoal);
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  color: var(--dragon-red);
+  text-decoration: underline;
+}
+
 .contact-value.placeholder em {
   display: block;
   font-style: normal;
